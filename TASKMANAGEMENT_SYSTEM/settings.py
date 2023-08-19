@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken'
 ]
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
+    'auth_app.backends.CustomEmailBackend',  # Replace with the actual path to your custom backend
+    'django.contrib.auth.backends.ModelBackend',  # Default Django backend
 ]
 AUTH_USER_MODEL = 'auth_app.CustomUser'
 
